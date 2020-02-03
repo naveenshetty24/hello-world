@@ -4,7 +4,7 @@ node
     {
         currentBuild.displayName = "1.0-SNAPSHOT"
         currentBuild.description = "multibranch pipeline"
-        git clone https://github.com/naveenshetty24/hello-world.git
+        git checkout -f ${env.BRANCH_NAME}
     }
     stage("build")
     {
